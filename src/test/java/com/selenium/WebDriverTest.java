@@ -25,9 +25,9 @@ public class WebDriverTest {
     public WebDriverTest(String testName) {
     }
 
-/*    public static void main(String[] args) {
+    public static void main(String[] args) {
     	System.out.println("main for manifest");
-    }*/
+    }
     
     /**
      * Rigourous Test :-)
@@ -37,7 +37,7 @@ public class WebDriverTest {
         Assert.assertTrue( 2 == 2 );
     }
     
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void test001SetUpFF() {
     	 driver = new FirefoxDriver();
     	 driver.get(url);
@@ -70,7 +70,7 @@ public class WebDriverTest {
 		driver.quit();
     }
     
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void test004SetUpFF() {
     	System.setProperty("webdriver.gecko.driver", "/Library/geckodriver");
     	capabilities = DesiredCapabilities.firefox();

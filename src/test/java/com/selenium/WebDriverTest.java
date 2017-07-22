@@ -37,12 +37,11 @@ public class WebDriverTest {
         Assert.assertTrue( 2 == 2 );
     }
     
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void test001SetUpFF() {
     	 driver = new FirefoxDriver();
     	 driver.get(url);
-    }
-    
+    }    
     
     @Test(enabled = false)
     public void test002SetUpFF() {
@@ -70,7 +69,7 @@ public class WebDriverTest {
 		driver.quit();
     }
     
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void test004SetUpFF() {
     	System.setProperty("webdriver.gecko.driver", "/Library/geckodriver");
     	capabilities = DesiredCapabilities.firefox();
